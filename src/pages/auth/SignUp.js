@@ -29,7 +29,7 @@ const SignUp=()=>{
         const response = await axios.post(`http://localhost:8087/auth/signup`,data);
 
         if (response.status===200){
-            navigate("/signin");
+            navigate("auth/signin");
         }
     }
 
