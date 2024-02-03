@@ -38,6 +38,7 @@ const SignUp=()=>{
       <div className="text-center mb-5">
         <h1 className="reg-topic topic">Sign-Up</h1>
         <p>Hey enter your details for create new account</p>
+        <p>test</p>
       </div>
       <form onSubmit={handleRegister}>
         <div className="form-group mb-4">
