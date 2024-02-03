@@ -34,43 +34,44 @@ const SignUp=()=>{
     }
 
   return (
-    <div className="login-box">
+    <div className="login-box position-absolute top-50 start-50 translate-middle">
       <div className="text-center mb-5">
-        <h1>User Register</h1>
+        <h1 className="reg-topic topic">Sign-Up</h1>
+        <p>Hey enter your details for create new account</p>
       </div>
       <form onSubmit={handleRegister}>
-        <div className="form-group mb-5">
+        <div className="form-group mb-4">
           <input
             type="text"
             className="form-control"
-            placeholder="User Name"
+            placeholder="Enter our username"
             onChange={handleUserName}
             required
           />
         </div>
 
-        <div className="form-group mb-5">
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Password"
-            onChange={handlePassword}
-            required
-          />
-        </div>
-
-        <div className="form-group mb-5">
+        <div className="form-group mb-4">
           <input
             type="email"
             className="form-control"
-            placeholder="Email"
+            placeholder="Enter your email address"
             onChange={handleEmail}
             required
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          Register
+        <div className="form-group mb-4">
+          <input
+            type="password"
+            className="form-control"
+            placeholder="Enter your password"
+            onChange={handlePassword}
+            required
+          />
+        </div>
+
+        <button type="submit" className="auth-btn btn btn-primary">
+          Sign-Up
         </button>
       </form>
     </div>
