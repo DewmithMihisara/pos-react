@@ -23,8 +23,10 @@ $light: #3E37F7;
 }
 .para{
     width: 100%;
-    text-align: center;
-
+    text-align: center
+}
+.navbar{
+    z-index: 10;
 }
 
 @import '~bootstrap/scss/bootstrap.scss';

@@ -6,6 +6,7 @@ import ProtectedRouts from './util/ProtectedRouts';
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
 import Home from './pages/Home';
+import Customer from './pages/Customer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             
             <Route element={<ProtectedRouts />}>
                 <Route index element={<Home />}/>
+                <Route path="customer" element={<Customer />} />
             </Route>
 
             <Route path="auth/signin" element={<SignIn />} />
