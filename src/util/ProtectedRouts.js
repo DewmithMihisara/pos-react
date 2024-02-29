@@ -1,21 +1,19 @@
 import axios from "axios";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Navigate, Outlet, useNavigate } from "react-router-dom";
 
+const ProtectedRoutes = () => {
+    const token = localStorage.getItem("token");
 
-const ProtectedRouts =()=>{
-    const token =localStorage.getItem('token');
-    console.log(token);
+    const navigate = useNavigate();
 
-    const navigate =useNavigate();
-
-    if(!token){
+    if(!token) {
         navigate("/signin");
-        console.log(token);
     }
 
-    axios.defaults.headers.common['Authorization']= `Bearer ${token}`;
+    axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
     return <Outlet />
+
 }
 
-export default ProtectedRouts;
+export default ProtectedRoutes;
