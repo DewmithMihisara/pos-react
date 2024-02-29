@@ -13,6 +13,8 @@ function App() {
       <BrowserRouter>
           <Routes>
             
+
+            
             <Route element={<ProtectedRoutes />}>
                 <Route index element={<Home />}/>
                 <Route path="customer" element={<Customer />} />
